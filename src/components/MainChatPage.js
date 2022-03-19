@@ -6,12 +6,12 @@ const MainChatPage = () => {
     <section id="mainChatPage">
       <div className="container">
         <div
-          className="top"
+          className="top w-100"
           style={{ backgroundColor: "#" + randomColor }}
         ></div>
-        <div className="bottom">
-          <ul className="row align-items-center ">
-            <li className="col-11 d-flex align-items-center justify-content-between">
+        <div className="bottom  w-100">
+          <ul className="row  align-items-center ">
+            <li className="col-11  d-flex align-items-center justify-content-between">
               <i className="fas fa-paperclip"></i>
               <input
                 className="form-control"
