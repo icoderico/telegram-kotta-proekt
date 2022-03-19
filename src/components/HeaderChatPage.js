@@ -5,7 +5,7 @@ const HeaderChatPage = () => {
     <section id="headerChatPage">
       <div className="container">
         <div className="row py-2 justify-content-between align-items-center">
-          <div className="col-10">  
+          <div className="col-10">
             <h5>Name</h5>
             <small>Last seen Recently</small>
           </div>
@@ -35,6 +35,7 @@ const HeaderChatPage = () => {
                 <a
                   target={"_blank"}
                   className="text-dark"
+                  rel="noopener noreferrer"
                   href="https://en.wikipedia.org/wiki/Celebrity"
                 >
                   <i className="border border-dark text-light bg-dark py-1 px-2 fas fa-info"></i>
@@ -43,6 +44,7 @@ const HeaderChatPage = () => {
               <li>
                 <a
                   target={"_blank"}
+                  rel="noopener noreferrer"
                   className="text-dark"
                   href="https://google.com"
                 >

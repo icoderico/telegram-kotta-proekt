@@ -87,3 +87,12 @@ section#headerChatPage {
     background-color: #6098ff;
   }
 }
+
+section#mainChatPage {
+  .top {
+    height: calc(100vh - 150px);
+  }
+  .container {
+    background-color: #6098ff;
+  }
+}

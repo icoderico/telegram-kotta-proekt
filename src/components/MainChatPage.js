@@ -6,9 +6,25 @@ const MainChatPage = () => {
     <section id="mainChatPage">
       <div className="container">
         <div
-          className="top vh-100"
-          style={{ backgroundColor: randomColor + "#" }}
+          className="top"
+          style={{ backgroundColor: "#" + randomColor }}
         ></div>
+        <div className="bottom">
+          <ul className="row align-items-center ">
+            <li className="col-11 d-flex align-items-center justify-content-between">
+              <i className="fas fa-paperclip"></i>
+              <input
+                className="form-control"
+                type="text"
+                placeholder="Write a message"
+              />
+            </li>
+            <li className="col-1 d-flex justify-content-between">
+              <i class="fas fa-smile"></i>
+              <i className="fas fa-microphone"></i>
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
   );
