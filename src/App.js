@@ -4,6 +4,7 @@ import SingleChat from "./Pages/SingleChat/SingleChat";
 import AllChats from "./Pages/AllChats/AllChatsPage";
 import UserPage from "./Pages/UserPage/UserPage";
 import Account from "./Pages/Form-vadation/Index"
+import FirstPage from "./Pages/AllChats/FirstPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="single" element={<SingleChat />} />
         <Route path="allchat" element={<AllChats />} />
         <Route path="userme" element={<UserPage />} />
+        <Route path="/chatPage"  element={<FirstPage />}></Route>
       </Routes>
     </>
   );
