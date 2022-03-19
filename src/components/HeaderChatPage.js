@@ -4,7 +4,7 @@ const HeaderChatPage = () => {
   return (
     <section id="headerChatPage">
       <div className="container">
-        <div className="row py-2 justify-content-between align-items-center">
+        <div className="row py-2 justify-content-between w-100 align-items-center">
           <div className="col-10">  
             <h5>Name</h5>
             <small>Last seen Recently</small>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import SingleChat from "./Pages/SingleChat/SingleChat";
-import AllChats from "./Pages/AllChats/AllChatsPage";
+import AllChats from "./Pages/AllChats/ChatsPage";
 import UserPage from "./Pages/UserPage/UserPage";
 import Account from "./Pages/Form-vadation/Index"
 import FirstPage from "./Pages/AllChats/FirstPage";

@@ -10,7 +10,7 @@ const HeaderAllChat = () => {
   return (
     <section id="headerAllChat">
       <div className="container py-2">
-        <div className="row text-center justify-content-center align-items-center">
+        <div className="row text-center justify-content-between w-100 align-items-center">
           <div className="col-4">
             <Button variant="primary" className="buton" onClick={handleShow}>
               <i className="fas fa-bars"></i>
