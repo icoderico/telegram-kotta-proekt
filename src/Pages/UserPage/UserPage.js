@@ -29,7 +29,6 @@ const UserPage = () => {
                 </li>
               </ul>
             </div>
-            <div className="clear-fix"></div>
           </div>
           <div id="photo">
             <div className="photo-img">
@@ -66,7 +65,9 @@ const UserPage = () => {
             molestias! Quasi modi quos, reiciendis sint minima, sit inventore
             error eum blanditiis vitae nihil!
           </div>
-          <div id="massage">Send a massage</div>
+          <div id="massage">
+            <a href="#">Send a massage</a>
+          </div>
         </div>
       </div>
     </section>

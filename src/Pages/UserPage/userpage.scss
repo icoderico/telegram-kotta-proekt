@@ -15,15 +15,20 @@ li {
     clear: both;
 }
 
+body {
+    background-color: #ddd;
+}
+
 #user {
     display: flex;
     justify-content: center;
+    margin-top: 1em;
 }
 
 .container {
-    background-color: rgb(67, 196, 255);
+    background-color: rgb(231, 243, 255);
     height: 70vh;
-    width: 60vh;
+    width: 50vh;
 
 }
 
@@ -35,7 +40,7 @@ li {
 #head {
     display: flex;
     margin-top: 1em;
-    // justify-content: space-between;
+    justify-content: space-between;
 }
 
 .head-left {
