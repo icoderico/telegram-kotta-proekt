@@ -10,18 +10,18 @@ const MainChatPage = () => {
           style={{ backgroundColor: "#" + randomColor }}
         ></div>
         <div className="bottom  w-100">
-          <ul className="row  align-items-center ">
-            <li className="col-11  d-flex align-items-center justify-content-between">
-              <i className="fas fa-paperclip"></i>
+          <ul className="row sss justify-content-start  align-items-center ">
+            <li className="col-11 justify-content-center d-flex align-items-center ">
+              <i className="fas pe-3  fa-paperclip wordss"></i>
               <input
-                className="form-control"
+                className="ps-2  form-control"
                 type="text"
                 placeholder="Write a message"
               />
             </li>
-            <li className="col-1 d-flex justify-content-between">
-              <i class="fas fa-smile"></i>
-              <i className="fas fa-microphone"></i>
+            <li className="col-1 d-flex">
+              <i class="fas fa-smile pe-4 wordss"></i>
+              <i className="fas fa-microphone wordss"></i>
             </li>
           </ul>
         </div>

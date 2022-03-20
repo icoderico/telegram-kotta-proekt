@@ -8,6 +8,22 @@ const year = data.getFullYear();
 const day = data.getDay();
 
 const ChatList = () => {
+  // if (day === 0) {
+  //   let day = "Sunday";
+  // } else if (day === 1) {
+  //   let day = "Monday";
+  // } else if (day === 2) {
+  //   day = "Tuesday";
+  // } else if (day === 3) {
+  //   day = "Wednesday";
+  // } else if (day === 4) {
+  //   day = "Thursday";
+  // } else if (day === 5) {
+  //   day = "Friday";
+  // } else if (day === 6) {
+  //   day = "Saturday";
+  // }
+
   return (
     <section id="chatList">
       <div className="container">
@@ -22,19 +38,19 @@ const ChatList = () => {
                     alt=""
                   />
                 </div>
-                <div className="col-6 align-self-center">
-                  <h1>Drake</h1>
-                  <p>
+                <div className="col-6 align-self-center ">
+                  <h1 className="text-start words">Drake</h1>
+                  <p className="text-start words">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
                     magnam iste quia debitis maxime suscipit saepe animi quaerat
                     ex voluptate!
                   </p>
                 </div>
                 <div className="col-3 text-center">
-                  <p>
+                  <p className="words">
                     {today}:0{month}:{year}
                   </p>
-                  <p>{day}</p>
+                  <p className="words">{day}</p>
                 </div>
               </div>
             </Link>
@@ -49,19 +65,19 @@ const ChatList = () => {
                     alt=""
                   />
                 </div>
-                <div className="col-6 align-self-center">
-                  <h1>Ariana Grande</h1>
-                  <p>
+                <div className="col-6 align-self-center ">
+                  <h1 className="text-start words">Ariana Grande</h1>
+                  <p className="text-start words">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
                     magnam iste quia debitis maxime suscipit saepe animi quaerat
                     ex voluptate!
                   </p>
                 </div>
                 <div className="col-3 text-center">
-                  <p>
+                  <p className="words">
                     {today}:0{month}:{year}
                   </p>
-                  <p>{day}</p>
+                  <p className="words">{day}</p>
                 </div>
               </div>
             </Link>
@@ -77,18 +93,18 @@ const ChatList = () => {
                   />
                 </div>
                 <div className="col-6 align-self-center">
-                  <h1>Zendaya</h1>
-                  <p>
+                  <h1 className="text-start words">Zendaya</h1>
+                  <p className="text-start words">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
                     magnam iste quia debitis maxime suscipit saepe animi quaerat
                     ex voluptate!
                   </p>
                 </div>
                 <div className="col-3 text-center">
-                  <p>
+                  <p className="words">
                     {today}:0{month}:{year}
                   </p>
-                  <p>{day}</p>
+                  <p className="words">{day}</p>
                 </div>
               </div>
             </Link>
@@ -104,18 +120,18 @@ const ChatList = () => {
                   />
                 </div>
                 <div className="col-6 align-self-center">
-                  <h1>The Rock</h1>
-                  <p>
+                  <h1 className="text-start words">The Rock</h1>
+                  <p className="text-start words">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
                     magnam iste quia debitis maxime suscipit saepe animi quaerat
                     ex voluptate!
                   </p>
                 </div>
                 <div className="col-3 text-center">
-                  <p>
+                  <p className="words">
                     {today}:0{month}:{year}
                   </p>
-                  <p>{day}</p>
+                  <p className="words">{day}</p>
                 </div>
               </div>
             </Link>
@@ -131,18 +147,18 @@ const ChatList = () => {
                   />
                 </div>
                 <div className="col-6 align-self-center">
-                  <h1>Tom Holland</h1>
-                  <p>
+                  <h1 className="text-start words">Tom Holland</h1>
+                  <p className="text-start words">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
                     magnam iste quia debitis maxime suscipit saepe animi quaerat
                     ex voluptate!
                   </p>
                 </div>
                 <div className="col-3 text-center">
-                  <p>
+                  <p className="words">
                     {today}:0{month}:{year}
                   </p>
-                  <p>{day}</p>
+                  <p className="words">{day}</p>
                 </div>
               </div>
             </Link>

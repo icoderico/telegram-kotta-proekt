@@ -5,15 +5,15 @@ const HeaderChatPage = () => {
     <section id="headerChatPage">
       <div className="container">
         <div className="row py-2 justify-content-between w-100 align-items-center">
-          <div className="col-10">  
-            <h5>Name</h5>
-            <small>Last seen Recently</small>
+          <div className="col-10">
+            <h5 className="wordss">Name</h5>
+            <small className="wordss">Last seen Recently</small>
           </div>
           <div className="col-2">
-            <ul className="d-flex justify-content-between align-items-center">
+            <ul className="d-flex justify-content-center gap-4 align-items-center">
               <li>
                 <a
-                  className="text-dark"
+                  className="wordss"
                   href="https://www.instagram.com/cristiano/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -25,7 +25,7 @@ const HeaderChatPage = () => {
                 <a
                   href="tel:+998930755620"
                   target="_blank"
-                  className="text-dark"
+                  className="wordss"
                   rel="noopener noreferrer"
                 >
                   <i className="fas fa-phone"></i>
@@ -34,18 +34,18 @@ const HeaderChatPage = () => {
               <li>
                 <a
                   target={"_blank"}
-                  className="text-dark"
+                  className="wordss"
                   rel="noopener noreferrer"
                   href="https://en.wikipedia.org/wiki/Celebrity"
                 >
-                  <i className="border border-dark text-light bg-dark py-1 px-2 fas fa-info"></i>
+                  <i className="py-1 px-2 fas fa-info"></i>
                 </a>
               </li>
               <li>
                 <a
                   target={"_blank"}
                   rel="noopener noreferrer"
-                  className="text-dark"
+                  className="wordss"
                   href="https://google.com"
                 >
                   <i className="fas fa-list"></i>

@@ -50,13 +50,19 @@ code {
 }
 
 section#headerAllChat {
-  background-color: #74a1f5;
+  background-color: #B263FF;
   .buton {
     background-color: inherit;
     border: inherit;
     font-size: 22px;
   }
-  
+  .color {
+    color: #eeeeee;
+    &:hover {
+      color: #0e5ae9;
+      transition: .3s;
+    }
+  }
   
 }
 
@@ -73,7 +79,7 @@ section#chatList {
       border-bottom: 2px solid #eeeeee;
     }
     .image {
-      border: 5px solid #0e5ae9;
+      border: 5px solid #B263FF;
       border-radius: 50%;
       width: 200px;
       aspect-ratio: 1;
@@ -81,22 +87,53 @@ section#chatList {
   }
 }
 
+.words {
+  &:hover {
+    color: #0e5ae9;
+    transition: .3s;
+  }
+}
+
+.wordss {
+  color: #eeeeee;
+  &:hover {
+    color: #0e5ae9;
+    transition: .3s;
+  }
+}
+
 
 section#headerChatPage {
   .container {
-    background-color: #6098ff;
+    background-color: #B263FF;
   }
 }
 
 section#mainChatPage {
   .top {
-    height: calc(100vh - 150px);
+    height: calc(100vh - 170px);
   }
   .container {
-    background-color: #6098ff;
+    background-color: #B263FF;
   }
 }
 
+.offcanvasUl {
+  background-color: #B263FF;
+  li {
+    &:hover {
+      color: #0e5ae9;
+      transition: .3s;
+    }
+  }
+}
+
+.sss {
+  margin-bottom: 0px ; 
+  padding-left: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 
 .header{
   display: flex;
