@@ -35,6 +35,7 @@ const HeaderChatPage = () => {
                 <a
                   target={"_blank"}
                   className="text-dark"
+                  rel="noopener noreferrer"
                   href="https://en.wikipedia.org/wiki/Celebrity"
                 >
                   <i className="border border-dark text-light bg-dark py-1 px-2 fas fa-info"></i>
@@ -43,6 +44,7 @@ const HeaderChatPage = () => {
               <li>
                 <a
                   target={"_blank"}
+                  rel="noopener noreferrer"
                   className="text-dark"
                   href="https://google.com"
                 >
