@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 .changeColor{
@@ -9,28 +10,23 @@
   height: 100vh;
 }
 
-p{
-  text-align: center;
-  padding: 20px 0;
-  font-size: 22px;
-  font-weight: 700;
-}
 
 form{
-  display: flex;
-  background: grey;
+  align-items: center;
   justify-content: center;
   padding: 20px 0;
 }
 
 input{
-  padding: 5px 5px;
-  border-radius: 10px;
-  border: transparent;
+
+  border-radius: 2px;
+  border: transparent
+
 }
 
 button{
   padding: 5px 15px;
-  background: green;
+  background: rgb(60, 90, 102);
   color: white;
+  border-radius: 5px;
 }
