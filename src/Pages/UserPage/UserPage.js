@@ -4,7 +4,7 @@ import "./userpage.scss";
 const UserPage = () => {
   return (
     <section id="user">
-      <div className="container">
+      <div className="container1">
         <div className="container2">
           <div id="head">
             <div className="head-left">
