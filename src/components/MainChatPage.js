@@ -13,11 +13,13 @@ const MainChatPage = () => {
           <ul className="row sss justify-content-start  align-items-center ">
             <li className="col-11 justify-content-center d-flex align-items-center ">
               <i className="fas pe-3  fa-paperclip wordss"></i>
-              <input
-                className="ps-2  form-control"
-                type="text"
-                placeholder="Write a message"
-              />
+              <form className="form-control">
+                <input
+                  className="ps-2  form-control"
+                  type="text"
+                  placeholder="Write a message"
+                />
+              </form>
             </li>
             <li className="col-1 d-flex">
               <i class="fas fa-smile pe-4 wordss"></i>
