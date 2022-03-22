@@ -8,22 +8,22 @@ const UserPage = () => {
         <div className="container2">
           <div id="head">
             <div className="head-left">
-              <a href="#">Information</a>
+              <a href="#info">Information</a>
             </div>
             <div className="head-right">
               <ul>
                 <li>
-                  <a href="#">
+                  <a href="#phone">
                     <i class="fa-solid fa-phone"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="#menu">
                     <i class="fa-solid fa-ellipsis-vertical"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="#sm">
                     <i class="fa-solid fa-xmark"></i>
                   </a>
                 </li>
@@ -66,7 +66,7 @@ const UserPage = () => {
             error eum blanditiis vitae nihil!
           </div>
           <div id="massage">
-            <a href="#">Send a massage</a>
+            <a href="#message">Send a massage</a>
           </div>
         </div>
       </div>
