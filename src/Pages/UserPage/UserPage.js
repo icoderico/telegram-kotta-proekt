@@ -66,7 +66,7 @@ const UserPage = () => {
             error eum blanditiis vitae nihil!
           </div>
           <div id="massage">
-            <a href="#">Send a massage</a>
+            <a href="#message">Send a massage</a>
           </div>
         </div>
       </div>
