@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+<<<<<<< HEAD
 .changeColor{
   width: 100%;
   height: 100vh;
@@ -48,6 +49,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+=======
+>>>>>>> d6399cbe6c8ca006a89b51f040e7fedab8ee35e6
 
 section#headerAllChat {
   background-color: #B263FF;
@@ -65,11 +68,9 @@ section#headerAllChat {
   }
   
 }
-
 ul {
   list-style: none;
 }
-
 section#chatList {
   ul {
     list-style: none;
@@ -86,7 +87,6 @@ section#chatList {
     }
   }
 }
-
 .words {
   &:hover {
     color: #0e5ae9;
@@ -140,6 +140,7 @@ section#mainChatPage {
   justify-content: space-between;
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 50px;
   a{
     font-size: 22px;
     color: black;
