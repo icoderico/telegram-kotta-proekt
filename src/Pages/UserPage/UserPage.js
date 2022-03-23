@@ -3,6 +3,9 @@ import userPic from "./user-photo.jpg";
 import "./userpage.scss";
 
 const UserPage = () => {
+
+  
+
   return (
     <>
       <div className="userPage">
@@ -10,9 +13,9 @@ const UserPage = () => {
           <div className="UserPageHeader">
             <h4>Information</h4>
             <div className="userPageIcons">
-              <i class="fa-solid fa-phone"></i>
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-              <i class="fa-solid fa-delete-left"></i>
+              <i className="fa-solid fa-phone"></i>
+              <i className="fa-solid fa-ellipsis-vertical"></i>
+              <i className="fa-solid fa-delete-left"></i>
             </div>
           </div>
           <div className="userPageProfile">
@@ -26,7 +29,7 @@ const UserPage = () => {
           <div className="userPageInfromation">
             <div className="row userInfo">
               <div className="col-md-3 text-center">
-              <i class="fa-solid fa-circle-info"></i>
+              <i className="fa-solid fa-circle-info"></i>
               </div>
               <div className="col-md-9">
                 <span>+998 (XX) XXX-XX-XX</span> <br />
@@ -49,15 +52,15 @@ const UserPage = () => {
             </div>
             <div className="row userInfo">
               <div className="col-md-3 text-center">
-              <i class="fa-solid fa-bell"></i>
+              <i className="fa-solid fa-bell"></i>
               </div>
               <div className="col-md-6">
                 <span>Notifications</span>
               </div>
               <div className="col-md-3">
-                <div class="form-check form-switch">
+                <div className="form-check form-switch">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     role="switch"
                     id="flexSwitchCheckChecked"
@@ -78,13 +81,13 @@ const UserPage = () => {
 
             <div className="row addInfo">
               <div className="col-md-3 text-center">
-              <i class="fa-solid fa-image"></i>
+              <i className="fa-solid fa-image"></i>
               </div>
               <div className="col-md-9">50 Photographers</div>
             </div>
             <div className="row addInfo">
               <div className="col-md-3 text-center">
-              <i class="fa-solid fa-video"></i>
+              <i className="fa-solid fa-video"></i>
               </div>
               <div className="col-md-9"> 19 Videos</div>
             </div>
