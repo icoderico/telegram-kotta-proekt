@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 import React from "react";
 import loginImg from "./img.svg"
 
