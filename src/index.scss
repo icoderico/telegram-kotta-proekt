@@ -49,6 +49,7 @@ code {
     monospace;
 }
 
+
 section#headerAllChat {
   background-color: #b263ff;
   .buton {
@@ -129,6 +130,7 @@ section#mainChatPage {
   padding-top: 5px;
   padding-bottom: 5px;
 }
+
 #header {
   .header {
     border-bottom: 1px solid #d8d8d8;
@@ -151,5 +153,6 @@ section#mainChatPage {
         transition: 0.3s;
       }
     }
+
   }
 }
