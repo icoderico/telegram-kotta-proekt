@@ -2,6 +2,7 @@ import React from "react";
 import loginImg from "./img.svg";
 
 export class Register extends React.Component {
+  
   handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData(e.target);
