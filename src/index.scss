@@ -4,50 +4,6 @@
   box-sizing: border-box;
 }
 
-.changeColor{
-  width: 100%;
-  height: 100vh;
-}
-
-p{
-  text-align: center;
-  padding: 20px 0;
-  font-size: 22px;
-  font-weight: 700;
-}
-
-form{
-  display: flex;
-  background: grey;
-  justify-content: center;
-  padding: 20px 0;
-}
-
-input{
-  padding: 5px 5px;
-  border-radius: 10px;
-  border: transparent;
-}
-
-button{
-  padding: 5px 15px;
-  background: green;
-  color: white;
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
 
 section#headerAllChat {
   background-color: #B263FF;
@@ -65,11 +21,9 @@ section#headerAllChat {
   }
   
 }
-
 ul {
   list-style: none;
 }
-
 section#chatList {
   ul {
     list-style: none;
@@ -86,7 +40,6 @@ section#chatList {
     }
   }
 }
-
 .words {
   &:hover {
     color: #0e5ae9;

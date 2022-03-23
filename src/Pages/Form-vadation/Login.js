@@ -35,9 +35,10 @@ export class Login extends React.Component {
     render() {
       return (
         <>
-          <div ref={this.props.containerRef}>
-            <h1 className="header">Login</h1>
             <form onSubmit={this.onSubmit} className="content">
+            <div className="matn">
+              <h4 >Login</h4>
+            </div>
               <div className="img">
                 <img src={loginImg} alt="img" />
               </div>
@@ -64,10 +65,9 @@ export class Login extends React.Component {
                 </div>
               </div>
               <div className="footer">
-                <button className="btn">Login</button>
+                <button className="form-btn">Login</button>
               </div>
             </form>
-          </div>
         </>
       );
     }

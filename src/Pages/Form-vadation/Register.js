@@ -26,9 +26,11 @@ export class Register extends React.Component {
   render() {
     return (
       <>
-        <div ref={this.props.containerRef}>
-          <h1 className="header">Register</h1>
+        <div>
           <form onSubmit={this.handleSubmit} className="content">
+          <div className="matn">
+            <h4>Register</h4>
+          </div>
             <div className="img">
               <img src={loginImg} alt="img" />
             </div>
@@ -56,7 +58,7 @@ export class Register extends React.Component {
               </div>
             </div>
             <div className="footer">
-              <button className="btn">Register</button>
+              <button className="form-btn">Register</button>
             </div>
           </form>
         </div>

@@ -29,7 +29,8 @@ class Account extends React.Component {
     const current = isLogginActive ? "Register" : "Login";
     const currentActive = isLogginActive ? "login" : "register";
     return (
-      <div className="Lodin-register-card">
+      <div className="login-reg">
+        <div className="Lodin-register-card">
         <div className="login">
           <div className="container" ref={ref => (this.container = ref)}>
             {isLogginActive && (
@@ -46,6 +47,7 @@ class Account extends React.Component {
           />
         </div>
       <p> {this.props.current} </p>
+      </div>
       </div>
     );
   }
