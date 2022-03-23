@@ -19,7 +19,10 @@ export class Register extends React.Component {
       .then((data) => {
         console.log(data);
         const token = data.token;
-        localStorage.setItem("TOKEN", token);
+        if (data.message === "User Already Exists") {
+          alert("User Already Exists! Please choose another username!!!😁");
+        }
+          localStorage.setItem("TOKEN", token);
         const token2 = localStorage.getItem("TOKEN")
         console.log(token2);
       });
