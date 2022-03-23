@@ -1,8 +1,10 @@
 import React from "react";
 import loginImg from "./img.svg";
 
-export class Register extends React.Component {
-  handleSubmit(e) {
+
+function Register() {
+
+ function handleSubmit(e) {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
@@ -23,11 +25,12 @@ export class Register extends React.Component {
         console.log(token2);
       });
   }
-  render() {
-    return (
-      <>
-        <div>
-          <form onSubmit={this.handleSubmit} className="content">
+
+
+  return (
+    <div>
+       <div className="form-container">
+          <form onSubmit={handleSubmit} className="content">
           <div className="matn">
             <h4>Register</h4>
           </div>
@@ -62,7 +65,8 @@ export class Register extends React.Component {
             </div>
           </form>
         </div>
-      </>
-    );
-  }
+    </div>
+  )
 }
+
+export default Register
