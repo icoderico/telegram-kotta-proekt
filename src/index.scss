@@ -130,6 +130,9 @@ section#mainChatPage {
   padding-bottom: 5px;
 }
 #header {
+  .container {
+    width: 100%;
+  }
   .header {
     width: 100%;
     border-bottom: 1px solid #d8d8d8;
