@@ -1,42 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import loginImg from "./img.svg"
+import "./style.scss"
 
-export class Login extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        username: "",
-        password: "",
-      };
-      this.onSubmit = this.onSubmit.bind(this);
-      this.onChange = this.onChange.bind(this);
-    }
-  
-  
-  
-    onSubmit(e) {
-      e.preventDefault();
-      fetch("https://telegram-alisherjon-api.herokuapp.com/auth", {
-        method: "POST",
-        body: JSON.stringify(this.state),
-        headers: {
-            "Content-Type": "application/json"
-        }
-      })
-        .then((res) => res.json())
-        .then((data) => console.log(data)
-         , console.log(this.state) 
-        );
-    }
-  
-    onChange(e) {
-      this.setState({ [e.target.name]: e.target.value });
-    }
-  
-    render() {
+export default function Login (){
+
+  function onSubmit(e) {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+    console.log(data);
+    fetch("https://telegram-alisherjon-api.herokuapp.com/auth", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        const token = data.token;
+        localStorage.setItem("TOKEN", token);
+        const token2 = localStorage.getItem("TOKEN")
+        console.log(token2);
+      });
+  }
+
       return (
-        <>
-            <form onSubmit={this.onSubmit} className="content">
+        <div className="form-container">
+            <form onSubmit={onSubmit} className="content">
             <div className="matn">
               <h4 >Login</h4>
             </div>
@@ -51,7 +43,6 @@ export class Login extends React.Component {
                   <input
                     type="text"
                     name="username"
-                    onChange={this.onChange}
                     placeholder="Username"
                   />
                 </div>
@@ -60,7 +51,6 @@ export class Login extends React.Component {
                   <input
                     type="password"
                     name="password"
-                    onChange={this.onChange}
                     placeholder="Password"
                   />
                 </div>
@@ -69,7 +59,7 @@ export class Login extends React.Component {
                 <button className="form-btn">Login</button>
               </div>
             </form>
-        </>
+        </div>
       );
-    }
+  
   }

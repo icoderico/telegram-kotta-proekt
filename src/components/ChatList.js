@@ -19,7 +19,7 @@ const ChatList = () => {
     console.log(data, username);
     axios.get(`https://telegram-alisherjon-api.herokuapp.com/users/${username}`, {
       headers: {
-        authorization: `Barear ${token}`,
+        authorization: `Bearer ${token}`,
       }
     }).then(response => {
       console.log(response.data);

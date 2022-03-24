@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route path="" element={<HomePage />} />
         <Route path="login" element={<Account />} />
-        <Route path="single" element={<SingleChat />} />
+        {/* <Route path="single" element={<SingleChat />} /> */}
         <Route path="allchat" element={<FirstPage />} />
         <Route path="userme" element={<UserPage />} />
         <Route path="chatPage" element={<AllChats />}></Route>
