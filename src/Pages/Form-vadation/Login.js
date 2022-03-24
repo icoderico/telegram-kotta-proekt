@@ -22,6 +22,7 @@ export default function Login (){
         const token = data.token;
         localStorage.setItem("TOKEN", token);
         const token2 = localStorage.getItem("TOKEN")
+        console.log(token2);
       });
   }
 

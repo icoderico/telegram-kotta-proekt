@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import userPic from "./user-photo.jpg";
 import "./userpage.scss";
 
 const UserPage = () => {
+  const token = localStorage.getItem("TOKEN");
+
+  console.log(token);
+
+  useEffect(() => {
+    fetch(`https://telegram-alisherjon-api.herokuapp.com/users`, {
+      headers: {
+        authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, [token]);
 
   return (
     <>
@@ -11,9 +26,9 @@ const UserPage = () => {
           <div className="UserPageHeader">
             <h4>Information</h4>
             <div className="userPageIcons">
-              <i class="fa-solid fa-phone"></i>
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-              <i class="fa-solid fa-delete-left"></i>
+              <i className="fa-solid fa-phone"></i>
+              <i className="fa-solid fa-ellipsis-vertical"></i>
+              <i className="fa-solid fa-delete-left"></i>
             </div>
           </div>
           <div className="userPageProfile">
@@ -58,9 +73,9 @@ const UserPage = () => {
                 <span>Notifications</span>
               </div>
               <div className="col-md-3">
-                <div class="form-check form-switch">
+                <div className="form-check form-switch">
                   <input
-                    class="form-check-input"
+                    className="form-check-input"
                     type="checkbox"
                     role="switch"
                     id="flexSwitchCheckChecked"
@@ -116,7 +131,7 @@ const UserPage = () => {
             </div>
             <div className="row addInfo">
               <div className="col-md-3 text-center">
-                <i class="fa-solid fa-code-branch"></i>
+                <i className="fa-solid fa-code-branch"></i>
               </div>
               <div className="col-md-9"> 32 Gifts</div>
             </div>
