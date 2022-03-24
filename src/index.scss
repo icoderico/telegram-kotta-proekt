@@ -157,3 +157,24 @@ section#mainChatPage {
     }
   }
 }
+
+
+.buttonSearch {
+  height: 47px;
+  width: 55px;
+  border-radius: 0 43% 43% 0 ;
+  transform: translateX(-56px) translateY(-2px);
+  background-color: #b263ff;
+  border: 2px solid #0e5ae9;
+  color: #eeeeee;
+  font-size: 18px;
+  // display: none;
+}
+
+.inputSearch {
+  border: 1px solid #0e5ae9;
+  outline: none;
+  // &:focus ~  .buttonSearch {
+  //   display: block;
+  // }
+}

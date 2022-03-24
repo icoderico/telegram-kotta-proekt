@@ -6,6 +6,7 @@ import UserPage from "./Pages/UserPage/UserPage";
 import Account from "./Pages/Form-vadation/Index";
 import FirstPage from "./Pages/AllChats/FirstPage";
 import HomePage from "./Pages/HomePage/HomePage";
+import Search from "./Pages/search/Search";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path="" element={<HomePage />} />
         <Route path="login" element={<Account />} />
+        <Route path="search" element={<Search />} />
         {/* <Route path="single" element={<SingleChat />} /> */}
         <Route path="allchat" element={<FirstPage />} />
         <Route path="userme" element={<UserPage />} />
