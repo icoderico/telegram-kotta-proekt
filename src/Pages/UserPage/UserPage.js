@@ -1,177 +1,76 @@
-import React, { useEffect } from "react";
-import userPic from "./user-photo.jpg";
+import React from "react";
 import "./userpage.scss";
 
 const UserPage = () => {
-  const token = localStorage.getItem("TOKEN");
-
-  console.log(token);
-
-  useEffect(() => {
-    fetch(`https://telegram-alisherjon-api.herokuapp.com/users`, {
-      headers: {
-        authorization: `Bearer ${token}`,
-        "Content-Type": "application/json",
-      },
-      method: "GET",
-    })
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  }, [token]);
-
   return (
-    <>
-      <div className="userPage">
-        <div className="userCard">
-          <div className="UserPageHeader">
-            <h4>Information</h4>
-            <div className="userPageIcons">
-              <i className="fa-solid fa-phone"></i>
-              <i className="fa-solid fa-ellipsis-vertical"></i>
-              <i className="fa-solid fa-delete-left"></i>
+    <section id="user" className="d-flex justify-content-center">
+      <div className="container1 h-50 w-50 bg-danger">
+        <div className="container2">
+          <div id="head" className="d-flex">
+            <div className="head-left">
+              <a href="#info">Information</a>
+            </div>
+            <div className="head-right">
+              <ul className="d-flex">
+                <li>
+                  <a href="#phone">
+                    <i class="fa-solid fa-phone"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#menu">
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#sm">
+                    <i class="fa-solid fa-xmark"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
-          <div className="userPageProfile">
-            <img className="userImg" src={userPic} alt="" width={100} />
-            <div className="userText">
-              <h4>Name Middle-name</h4>
-              <p className="text-secondary fw-lighter">last seen recntly</p>
-            </div>
-          </div>
-          <div className="break"></div>
-          <div className="userPageInfromation">
-            <div className="row userInfo">
-              <div className="col-md-3 text-center">
-                <i class="fa-solid fa-circle-info"></i>
-              </div>
-              <div className="col-md-9">
-                <span>+998 (XX) XXX-XX-XX</span> <br />
-                <span className="text-secondary fw-lighter">telephone</span>
-              </div>
-            </div>
-            <div className="row userInfo">
-              <div className="col-md-3 text-center"></div>
-              <div className="col-md-9">
-                <span>...</span> <br />
-                <span className="text-secondary fw-lighter">About me</span>
-              </div>
-            </div>
-            <div className="row userInfo">
-              <div className="col-md-3 text-center"></div>
-              <div className="col-md-9">
-                <span>...</span> <br />
-                <span className="text-secondary fw-lighter mt-4">
-                  User Name
-                </span>
-              </div>
-            </div>
-            <div className="row userInfo">
-              <div className="col-md-3 text-center">
-                <i class="fa-solid fa-bell"></i>
-              </div>
-              <div className="col-md-6">
-                <span>Notifications</span>
-              </div>
-              <div className="col-md-3">
-                <div className="form-check form-switch">
-                  <input
-                    className="form-check-input"
-                    type="checkbox"
-                    role="switch"
-                    id="flexSwitchCheckChecked"
-                    checked
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="row userInfo ">
-              <div className="col-md-3"></div>
-              <div className="col-md-9">
-                <h5 className="text-primary">Send Message</h5>
+          <div id="photo">
+            <div className="photo-img">
+              <img
+                src="https://eitrawmaterials.eu/wp-content/uploads/2016/09/person-icon.png"
+                alt=""
+              />
+              <div className="name">
+                <h2>User</h2>
+                <p>online</p>
               </div>
             </div>
           </div>
-          <div className="break"></div>
-          <div className="userPageAdditional">
-            <div className="row addInfo">
-              <div className="col-md-3 text-center">
-                <i class="fa-solid fa-image"></i>
-              </div>
-              <div className="col-md-9">50 Photographers</div>
-            </div>
-            <div className="row addInfo">
-              <div className="col-md-3 text-center">
-                <i class="fa-solid fa-video"></i>
-              </div>
-              <div className="col-md-9"> 19 Videos</div>
-            </div>
-            <div className="row addInfo">
-              <div className="col-md-3 text-center">
-                <i class="fa-solid fa-file"></i>
-              </div>
-              <div className="col-md-9"> 22 Files</div>
-            </div>
-            <div className="row addInfo">
-              <div className="col-md-3 text-center">
-                <i class="fa-solid fa-headphones-simple"></i>
-              </div>
-              <div className="col-md-9"> 12 Audiofiles</div>
-            </div>
-            <div className="row addInfo">
-              <div className="col-md-3 text-center">
-                <i class="fa-solid fa-link"></i>
-              </div>
-              <div className="col-md-9"> 6 Links</div>
-            </div>
-            <div className="row addInfo">
-              <div className="col-md-3 text-center">
-                <i class="fa-solid fa-microphone-lines"></i>
-              </div>
-              <div className="col-md-9"> 6 Audiomessage</div>
-            </div>
-            <div className="row addInfo">
-              <div className="col-md-3 text-center">
-                <i className="fa-solid fa-code-branch"></i>
-              </div>
-              <div className="col-md-9"> 32 Gifts</div>
-            </div>
-            <div className="row addInfo">
-              <div className="col-md-3 text-center">
-                <i class="fa-solid fa-user-group"></i>
-              </div>
-              <div className="col-md-9"> 6 Groups</div>
+          <div id="row1">
+            <i class="fa-solid fa-circle-info"></i>
+            <div className="row1-info">
+              <p className="fir">@qewrreq.</p>
+              <p className="sec">User name</p>
             </div>
           </div>
-          <div className="break"></div>
-          <div className="footer">
-            <div className="row addInfo">
-              <div className="col-md-3 text-center">
-                <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </div>
-              <div className="col-md-9 text-start">Sent</div>
+          <div id="row2">
+            <div className="lll">
+              <i class="fa-regular fa-bell"></i>
+              <p className="row2-title">Notifications</p>
             </div>
-            <div className="row addInfo">
-              <div className="col-md-3 text-center">
-                <i class="fa-solid fa-pen"></i>
-              </div>
-              <div className="col-md-9 text-start"> Rename</div>
-            </div>
-            <div className="row addInfo">
-              <div className="col-md-3 text-center">
-                <i class="fa-solid fa-delete-left"></i>
-              </div>
-              <div className="col-md-9 text-start"> Remove from Contact</div>
-            </div>
-            <div className="row addInfo">
-              <div className="col-md-3 text-center">
-                <i class="fa-solid fa-ban text-danger"></i>
-              </div>
-              <div className="col-md-9 text-danger text-start"> Block</div>
-            </div>
+            <label htmlFor="switch">
+              <input type="checkbox" />
+              <span className="slider round"></span>
+            </label>
+          </div>
+          <div id="bio">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
+            incidunt architecto recusandae perferendis, ab necessitatibus sequi
+            molestias! Quasi modi quos, reiciendis sint minima, sit inventore
+            error eum blanditiis vitae nihil!
+          </div>
+          <div id="massage">
+            <a href="#message">Send a massage</a>
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
