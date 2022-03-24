@@ -3,6 +3,7 @@ import userPic from "./user-photo.jpg";
 import "./userpage.scss";
 
 const UserPage = () => {
+
   return (
     <>
       <div className="userPage">

@@ -5,7 +5,6 @@ import AllChats from "./Pages/AllChats/ChatsPage";
 import UserPage from "./Pages/UserPage/UserPage";
 import Account from "./Pages/Form-vadation/Index"
 import FirstPage from "./Pages/AllChats/FirstPage";
-import Login from "./Pages/Form-vadation/Login";
 
 function App() {
   return (
