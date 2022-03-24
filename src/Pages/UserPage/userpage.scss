@@ -1,100 +1,153 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+// a {
+//     text-decoration: none;
+//     color: inherit;
+// }
+
+// ul {
+//     list-style: none;
+// }
+
+// // li {
+// //     display: inline-block;
+// // }
+
+// .clear-fix {
+//     clear: both;
+// }
+
+// body {
+//     background-color: #ddd;
+// }
+
+#user {
+    // display: flex;
+    // justify-content: center;
+    margin-top: 1em;
+    width: 40%;
+    height: 20%;
 }
 
-.userPage{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 150vh;
-    margin-top: 80px;
+// .container1 {
+//     height: 70vh;
+//     width: 50vh;
+// }
 
-    .userCard{
-        width: 480px;
-        height: 1180px;
-        background: #eee;
-        box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.2);
-        border-radius: 3px;
+// .container2 {
+//     width: 90%;
+//     margin: 0 auto;
+// }
 
-        .UserPageHeader{
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 20px 10px;
+// #head {
+//     display: flex;
+//     margin-top: 1em;
+//     justify-content: space-between;
+// }
 
-            .userPageIcons{
-                width: 120px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+// .head-left {
+//     a {
+//         font-size: 1.5em;
+//         color: #444;
+//         font-weight: bold;
+//     }
+// }
 
-                i{
-                    font-size: 22px;
-                }
-            }
+// .head-right {
+//     justify-content: end;
+// }
 
-        }
+// a {
 
-        .userPageProfile{
-            display: flex;
-            align-items: center;
-            margin: 16px 0;
-            padding:20px 10px;
-            
-            .userImg{
-                border-radius: 50%;
-            }
+//     i {
+//         font-size: 1.5em;
+//         color: #ccc;
+//         padding: 0 .5em;
+//     }
+// }
 
-            .userText{
-                margin-left: 24px;
+// // photo
 
-                h4{
-                    margin-bottom: 8px;
-                }
+// #photo {
+//     display: flex;
+//     margin-top: 1em;
+//     border-bottom: 1px solid #ccc;
+//     padding-bottom: 2em;
 
-                p{
-                    padding: 0;
-                    font-size: 18px;
-                    text-align: left;
-                }
-            }
+//     .photo-img {
+//         display: flex;
 
-        }
+//         .name {
+//             align-self: center;
+//             padding-left: 1em;
 
-        .userPageInfromation{
-            padding:  20px 10px;
-            
-            .userInfo{
-                padding: 12px 0;
-                align-items: center;
+//             h2 {
+//                 color: #444;
+//             }
 
-                
+//             p {
+//                 color: rgb(16, 156, 211);
+//             }
+//         }
 
-                i{
-                    font-size: 22px;
-                }
-            }
-        }
+//         img {
+//             width: 25%;
+//             border-radius: 50%;
+//         }
+//     }
+// }
 
-        .userPageAdditional, .footer{
-          padding: 20px 20px;
+// #row1 {
+//     margin-top: 1.5em;
+//     display: flex;
 
-            .addInfo{
-              height: 40px;
-            }
+//     i {
+//         font-size: 1.5em;
+//         color: #ccc;
+//         margin-top: .3em;
+//     }
 
-            i{
-                font-size: 22px;
-            }
+//     .row1-info {
+//         padding-left: 1.5em;
 
-        }
+//         .fir {
+//             color: #444;
+//             font-weight: bold;
+//             font-size: 1.1em;
+//         }
 
-    }
+//         .sec {
+//             color: #ccc;
+//             font-size: .9em;
+//         }
+//     }
+// }
 
-}
+// #row2 {
+//     display: flex;
+//     justify-content: space-between;
+//     margin-top: 1em;
+//     .lll {
+//         display: flex;
+//         i {
+//             font-size: 1.5em;
+//             color: #ccc;
 
-.break{
-    height: 10px;
-    background: rgb(182, 181, 181);
-}
+//         }
+//         .row2-title {
+//             color: #555;
+//             font-weight: bold;
+//             margin-top: .1em;
+//             margin-left: 1.5em;
+//         }
+//     }
+// }
+
+// #bio {
+//     font-family: 'Courier New', Courier, monospace;
+//     margin-top: 1em;
+// }
+// #massage {
+//     text-align: center;
+//     margin-top: 1em;
+//     color: rgb(0, 183, 255);
+//     font-weight: bold;
+// }
