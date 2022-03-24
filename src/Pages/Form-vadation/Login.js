@@ -24,7 +24,8 @@ export class Login extends React.Component {
         }
       })
         .then((res) => res.json())
-        .then((data) => console.log(data) , console.log(this.state) 
+        .then((data) => console.log(data)
+         , console.log(this.state) 
         );
     }
   
