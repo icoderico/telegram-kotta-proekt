@@ -1,6 +1,11 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 const HeaderChatPage = () => {
+
+  const params = useParams();
+  
+
   return (
     <section id="headerChatPage">
       <div className="container">

@@ -22,7 +22,7 @@ const MainChatPage = () => {
               </form>
             </li>
             <li className="col-1 d-flex">
-              <i class="fas fa-smile pe-4 wordss"></i>
+              <i className="fas fa-smile pe-4 wordss"></i>
               <i className="fas fa-microphone wordss"></i>
             </li>
           </ul>
