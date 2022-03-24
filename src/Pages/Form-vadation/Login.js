@@ -28,7 +28,7 @@ export default function Login() {
   return (
     <div className="form-container">
       <form onSubmit={onSubmit} className="content">
-        <div className="matn">
+        <div className="header">
           <h4>Login</h4>
         </div>
         <div className="img">

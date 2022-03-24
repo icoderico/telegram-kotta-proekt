@@ -40,7 +40,7 @@ function Register() {
     <div>
        <div className="form-container">
           <form onSubmit={handleSubmit} className="content">
-          <div className="matn">
+          <div className="header">
             <h4>Register</h4>
           </div>
             <div className="img">
