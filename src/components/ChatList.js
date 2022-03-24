@@ -33,7 +33,7 @@ const ChatList = () => {
       <form onSubmit={handleSubmit}>
         <input type="text" name="username" placeholder="search" />
         <button type="submit">search</button>
-      </form>
+      </form> 
       <ul>
         <li></li>
       </ul>

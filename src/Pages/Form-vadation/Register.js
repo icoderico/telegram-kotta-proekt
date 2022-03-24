@@ -1,8 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import loginImg from "./img.svg";
 
 
 function Register() {
+
+  const navigate = useNavigate()
 
  function handleSubmit(e) {
     e.preventDefault();
@@ -26,6 +29,9 @@ function Register() {
           localStorage.setItem("TOKEN", token);
         const token2 = localStorage.getItem("TOKEN")
         console.log(token2);
+        if(token) {
+          navigate("/allchat")
+        }
       });
   }
 
