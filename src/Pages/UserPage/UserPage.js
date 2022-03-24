@@ -3,15 +3,15 @@ import "./userpage.scss";
 
 const UserPage = () => {
   return (
-    <section id="user">
-      <div className="container1">
+    <section id="user" className="d-flex justify-content-center">
+      <div className="container1 bg-danger">
         <div className="container2">
-          <div id="head">
+          <div id="head" className="d-flex">
             <div className="head-left">
               <a href="#info">Information</a>
             </div>
             <div className="head-right">
-              <ul>
+              <ul className="d-flex">
                 <li>
                   <a href="#phone">
                     <i class="fa-solid fa-phone"></i>
