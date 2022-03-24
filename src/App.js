@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes, Link } from "react-router-dom";
 // import SingleChat from "./Pages/SingleChat/SingleChat";
-import AllChats from "./Pages/AllChats/ChatsPage";
+import Chatpage from "./Pages/AllChats/ChatsPage";
 import UserPage from "./Pages/UserPage/UserPage";
 import Account from "./Pages/Form-vadation/Index";
 import FirstPage from "./Pages/AllChats/FirstPage";
@@ -18,7 +18,7 @@ function App() {
         {/* <Route path="single" element={<SingleChat />} /> */}
         <Route path="allchat" element={<FirstPage />} />
         <Route path="userme" element={<UserPage />} />
-        <Route path="chatPage" element={<AllChats />}></Route>
+        <Route path="chatPage/:id" element={<Chatpage />}></Route>
       </Routes>
     </>
   );
