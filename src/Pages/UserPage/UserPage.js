@@ -4,7 +4,7 @@ import "./userpage.scss";
 const UserPage = () => {
   return (
     <section id="user" className="d-flex justify-content-center">
-      <div className="container1 bg-danger">
+      <div className="container1 h-50 w-50 bg-danger">
         <div className="container2">
           <div id="head" className="d-flex">
             <div className="head-left">

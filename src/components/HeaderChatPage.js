@@ -9,8 +9,8 @@ const HeaderChatPage = () => {
             <h5 className="wordss">Name</h5>
             <small className="wordss">Last seen Recently</small>
           </div>
-          <div className="col-2">
-            <ul className="d-flex justify-content-center gap-4 align-items-center">
+          <div className="col-2 align-self-center">
+            <ul className="d-flex justify-content-center  align-items-center">
               <li>
                 <a
                   className="wordss"
