@@ -5,6 +5,7 @@ import AllChats from "./Pages/AllChats/ChatsPage";
 import UserPage from "./Pages/UserPage/UserPage";
 import Account from "./Pages/Form-vadation/Index";
 import FirstPage from "./Pages/AllChats/FirstPage";
+import Login from "./Pages/Form-vadation/Login";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
         </div>
       </section>
       <Routes>
-        <Route path="login" element={<Account />} />
+        <Route path="login" element={<Account/> } />
         <Route path="single" element={<SingleChat />} />
         <Route path="allchat" element={<FirstPage />} />
         <Route path="userme" element={<UserPage />} />

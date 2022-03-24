@@ -80,57 +80,8 @@
 //Custom Fonts
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 
-.App {
-text-align: center;
-display: flex;
-min-height: 100vh;
-justify-content: center;
-align-items: center;
-font-family: "Open Sans", sans-serif;
-}
-
-.App-logo {
-animation: App-logo-spin infinite 20s linear;
-height: 40vmin;
-pointer-events: none;
-}
-
-.App-header {
-background-color: #282c34;
-min-height: 100vh;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-font-size: calc(10px + 2vmin);
-color: white;
-}
-
-.App-link {
-color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-from {
-  transform: rotate(0deg);
-}
-to {
-  transform: rotate(360deg);
-}
-}
-
-.login {
-width: 27em;
-height: 40em;
-min-height: 44em;
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 5px;
-position: relative;
-z-index: 99;
-.container {
-    height: 750px;
+.form-container {
+  height: 720px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,15 +96,18 @@ z-index: 99;
   padding: 17px 10px;
   transition: transform 200ms ease-in-out;
 }
+
+
+
 .right-side {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 90%;
+  height: 80%;
   background-color: #B263FF;
-  width: 100%;
+  width: 50%;
   position: absolute;
-  right: -34%;
+  right: 34%;
   border-radius: 6px;
   z-index: 1;
   transition: all 400ms ease-in-out;
@@ -161,10 +115,10 @@ z-index: 99;
   box-shadow: 0px 0px 12px 2px rgba(15, 15, 15, 0.281);
 
   &.right {
-    right: -40%;
+    right: 25%;
     align-items: flex-end;
     &:hover {
-      right: -45%;
+      right: 20%;
     }
   }
   &.left {
@@ -182,7 +136,6 @@ z-index: 99;
     margin-right: 3em;
     margin-left: 3em;
   }
-}
 }
 
 .btn {
