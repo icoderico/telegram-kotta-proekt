@@ -5,7 +5,6 @@ import "./style.scss";
 
 function Account() {
   const [isRight, setIsRight] = useState(false);
-
   return (
     <div>
       <div className="login-reg">
@@ -24,6 +23,4 @@ function Account() {
     </div>
   );
 }
-
-
 export default Account;
