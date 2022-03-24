@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
 .login-reg{
   display: flex;
   justify-content:center;
@@ -5,14 +7,12 @@
   height: 100vh;
   margin-top: 50px;
 }
-
 .header {
   font-size: 24px;
   font-family: "Open Sans", sans-serif;
   margin-bottom: 12px;
   text-align: center;
 }
-
 .content {
   display: flex;
   flex-direction: column;
@@ -61,7 +61,6 @@
     }
   }
 }
-
 .container {
   width: 100%;
   display: flex;
@@ -70,10 +69,6 @@
 
 
 }
-
-//Custom Fonts
-@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-
 .form-container {
   height: 720px;
   display: flex;
@@ -89,9 +84,6 @@
   padding: 17px 10px;
   transition: transform 200ms ease-in-out;
 }
-
-
-
 .right-side {
   display: flex;
   flex-direction: column;
@@ -130,11 +122,9 @@
     margin-left: 3em;
   }
 }
-
 .footer{
   text-align: center;
 }
-
 .form-btn {
 font-size: 18px;
 padding: 5px 20px;
