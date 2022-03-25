@@ -3,8 +3,10 @@ import "./userpage.scss";
 import UserImg from "./user-photo.jpg";
 
 const UserPage = () => {
+
+  
+
   return (
-    
     <>
     <div className="userPage">
       <div className="userCard">
