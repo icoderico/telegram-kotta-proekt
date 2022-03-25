@@ -20,9 +20,9 @@ export default function Login() {
       .then((res) => res.json())
       .then((data) => {
         const token = data.token;
+        console.log(token)
         localStorage.setItem("TOKEN", JSON.stringify(token));
       });
-     navigate("/userme") 
   }
 
   return (

@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import loginImg from "./img.svg";
 
-
 function Register() {
 
   const navigate = useNavigate()
