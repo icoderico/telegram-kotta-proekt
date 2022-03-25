@@ -16,9 +16,6 @@ const ChatList = () => {
   return (
     <section id="chatList">
      sdfg
-      <ul>
-        <li></li>
-      </ul>
     </section>
   );
 };

@@ -1,7 +1,16 @@
+import axios from "axios";
 import React from "react";
 import "./userpage.scss";
 
 const UserPage = () => {
+  const token = localStorage.getItem("TOKEN");
+  axios
+    .get("https://telegram-alisherjon-api.herokuapp.com/users", {
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    })
+    .then((response) => console.log(response.data));
   return (
     <div className="userPage">
       <div className="userCard">
