@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import loginImg from "./img.svg";
 import "./style.scss";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
+
+  const navigate = useNavigate();
+
   function onSubmit(e) {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
-    console.log(data);
     fetch("https://telegram-alisherjon-api.herokuapp.com/auth", {
       method: "POST",
       body: JSON.stringify(data),
@@ -17,12 +20,10 @@ export default function Login() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         const token = data.token;
-        localStorage.setItem("TOKEN", token);
-        const token2 = localStorage.getItem("TOKEN");
-        console.log(token2);
+        localStorage.setItem("TOKEN", JSON.stringify(token));
       });
+     navigate("/userme") 
   }
 
   return (

@@ -6,6 +6,7 @@ const UserPage = () => {
   return (
     <div className="userPage">
       <div className="userCard">
+
         <div className="userPageHeader">
           <h4>Settings</h4>
           <div className="userPageIcons">
@@ -13,6 +14,7 @@ const UserPage = () => {
             <i class="fa-solid fa-delete-left"></i>
           </div>
         </div>
+
         <div className="userPageProfile">
           <div className="row align-items-center">
             <div className="col-3 ">
@@ -50,6 +52,7 @@ const UserPage = () => {
             </div>
           </div>
         </div>
+        
         <div className="break"></div>
 
         <div className="userPageAdditinals">
