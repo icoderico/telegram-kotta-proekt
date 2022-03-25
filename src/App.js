@@ -11,6 +11,7 @@ import Search from "./Pages/search/Search";
 function App() {
   return (
     <>
+     <Search/>
       <Routes>
         <Route path="" element={<HomePage />} />
         <Route path="login" element={<Account />} />
