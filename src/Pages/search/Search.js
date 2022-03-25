@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const Search = () => {
-  const [userData, setUserData] = useState([]);
-  const [phoneData, setPhoneData] = useState([]);
-  const [friendId, setFriendId] = useState([]);
+  const [userData, setUserData] = useState("");
+  const [phoneData, setPhoneData] = useState("");
+  const [friendId, setFriendId] = useState("");
 
   const token = localStorage.getItem("TOKEN");
   const handleSubmit = (e) => {
@@ -29,16 +29,35 @@ const Search = () => {
         setFriendId(_id);
       });
   };
+  console.log(phoneData);
 
+  console.log(friendId);
   const handleClick = () => {
-    axios.post(`https://telegram-alisherjon-api.herokuapp.com/chats`, {
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `Bearer ${token}`,
-      },
-      body: JSON.stringify(friendId),
-    });
+    axios
+      .post(`https://telegram-alisherjon-api.herokuapp.com/chats`, {
+        headers: {
+          authorization: `Bearer ${token}`,
+          // "Content-Type": "application/json",
+        },
+        body:  JSON.stringify(friendId),
+      })
+      .then((response) => {
+        console.log(response.data);
+      });
   };
+
+  // const handleClick = () => {
+  //   fetch("https://telegram-alisherjon-api.herokuapp.com/chats", {
+  //     method: "POST",
+  //     body: JSON.stringify(friendId),
+  //     headers: {
+  //       authorization: `Bearer ${token}`,
+  //       // "Content-Type": "application/json",
+  //     },
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+  // };
 
   return (
     <section id="search">
@@ -55,7 +74,7 @@ const Search = () => {
           </button>
         </form>
         <ul>
-          <li>
+          <li onClick={handleClick}>
             {userData} {phoneData}
           </li>
         </ul>
