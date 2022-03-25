@@ -32,32 +32,33 @@ const Search = () => {
   console.log(phoneData);
 
   console.log(friendId);
-  const handleClick = () => {
-    axios
-      .post(`https://telegram-alisherjon-api.herokuapp.com/chats`, {
-        headers: {
-          authorization: `Bearer ${token}`,
-          // "Content-Type": "application/json",
-        },
-        body:  JSON.stringify(friendId),
-      })
-      .then((response) => {
-        console.log(response.data);
-      });
-  };
-
   // const handleClick = () => {
-  //   fetch("https://telegram-alisherjon-api.herokuapp.com/chats", {
-  //     method: "POST",
-  //     body: JSON.stringify(friendId),
-  //     headers: {
-  //       authorization: `Bearer ${token}`,
-  //       // "Content-Type": "application/json",
-  //     },
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
+  //   axios
+  //     .post(`https://telegram-alisherjon-api.herokuapp.com/chats`, {
+  //       headers: {
+  //         authorization: `Bearer ${token}`,
+  //         // "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify(friendId),
+  //     })
+  //     .then((response) => {
+  //       console.log(response.data);
+  //     });
   // };
+
+  const handleClick = () => {
+    fetch("https://telegram-alisherjon-api.herokuapp.com/chats", {
+      method: "POST",
+      body: JSON.stringify(friendId),
+      headers: {
+        authorization: `Bearer ${token}`,
+        "Content-Type": "application/json",
+      },
+      mode: "no-cors"
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  };
 
   return (
     <section id="search">
@@ -73,9 +74,12 @@ const Search = () => {
             Go
           </button>
         </form>
-        <ul>
-          <li onClick={handleClick}>
-            {userData} {phoneData}
+        <ul className="userUl">
+          <li className="userLi border border-solid rounded-pill px-4 ">
+            <p>
+              {userData} {phoneData}
+            </p>
+            <button onClick={handleClick}>Go Chat</button>
           </li>
         </ul>
       </div>
