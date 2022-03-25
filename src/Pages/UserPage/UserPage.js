@@ -4,6 +4,8 @@ import UserImg from "./user-photo.jpg";
 
 const UserPage = () => {
   return (
+    
+    <>
     <div className="userPage">
       <div className="userCard">
 
@@ -52,7 +54,7 @@ const UserPage = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="break"></div>
 
         <div className="userPageAdditinals">
@@ -113,6 +115,7 @@ const UserPage = () => {
           
         </div>
       </div>
+    </>
   );
 };
 
