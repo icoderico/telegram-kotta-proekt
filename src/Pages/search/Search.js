@@ -37,14 +37,27 @@ const Search = () => {
       .post(`https://telegram-alisherjon-api.herokuapp.com/chats`, {
         headers: {
           authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
+          // "Content-Type": "application/json",
         },
-        body:  friendId,
+        body:  JSON.stringify(friendId),
       })
       .then((response) => {
         console.log(response.data);
       });
   };
+
+  // const handleClick = () => {
+  //   fetch("https://telegram-alisherjon-api.herokuapp.com/chats", {
+  //     method: "POST",
+  //     body: JSON.stringify(friendId),
+  //     headers: {
+  //       authorization: `Bearer ${token}`,
+  //       // "Content-Type": "application/json",
+  //     },
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => console.log(data));
+  // };
 
   return (
     <section id="search">
