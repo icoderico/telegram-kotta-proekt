@@ -23,7 +23,6 @@ const Search = () => {
         headers: {
           authorization: `Bearer ${token}`,
         },
-        type: "CORS",
       })
       .then((response) => {
         const { data } = response;
@@ -54,6 +53,7 @@ const Search = () => {
       )
       .then((response) => {
         const id = response.data.chat._id;
+        localStorage.setItem("chatId", id)
         navigate(`/ChatPage/${id}`);
       });
   };
