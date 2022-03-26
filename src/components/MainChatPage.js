@@ -1,6 +1,12 @@
 import React from "react";
+import { useParams } from "react-router-dom";
+
 
 const MainChatPage = () => {
+
+  const params = useParams()
+  console.log(params);
+
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
   return (
     <section id="mainChatPage">

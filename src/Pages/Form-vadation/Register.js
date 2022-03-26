@@ -23,6 +23,7 @@ function Register() {
         const token = data.token;
         if (data.message === "User Already Exists") {
           alert("User Already Exists! Please choose another username!!!😁");
+          e.target.reset()
         }
           localStorage.setItem("TOKEN", token);
         const token2 = localStorage.getItem("TOKEN")

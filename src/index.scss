@@ -178,3 +178,43 @@ section#mainChatPage {
   //   display: block;
   // }
 }
+
+.userUl {
+  // border: 1px solid #b263ff;
+  width: 100%;
+  text-align: center;
+  // border: 1px solid #b263ff;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.userLi {
+  vertical-align: middle;
+  font-size: 20px;
+  width: 50%;
+  margin-left: -50px;
+  display: flex;
+  color: #d8d8d8;
+  background-color: #0e5ae9;
+  
+  &:hover {
+    opacity: 50%;
+    transition: .5s;
+  }
+  justify-content: space-between;
+  p {
+    text-transform: uppercase;
+    padding-top: 15px;
+  }
+  padding-top: 10px;
+  padding-bottom: 10px;
+  button {
+    font-size: 16px;
+    border-radius: 30% 60% 60% 30%;
+    padding: 5px;
+    background-color: #b263ff;
+    color: #d8d8d8;
+    border: #0e5ae9 1px solid;
+  }
+}
