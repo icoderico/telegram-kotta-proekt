@@ -18,7 +18,7 @@ function App() {
         {/* <Route path="single" element={<SingleChat />} /> */}
         <Route path="allchat" element={<FirstPage />} />
         <Route path="userme" element={<UserPage />} />
-        <Route path="chatPage/:id" element={<Chatpage />}></Route>
+        <Route path="chatPage" element={<Chatpage />}></Route>
       </Routes>
     </>
   );

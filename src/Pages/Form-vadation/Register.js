@@ -3,8 +3,7 @@ import { useNavigate } from "react-router-dom";
 import loginImg from "./img.svg";
 
 function Register() {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
  function handleSubmit(e) {
     e.preventDefault();
@@ -77,4 +76,4 @@ function Register() {
   )
 }
 
-export default Register
+export default Register;

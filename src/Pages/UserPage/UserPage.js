@@ -1,10 +1,22 @@
 import React from "react";
 import "./userpage.scss";
 import UserImg from "./user-photo.jpg";
+import axios from "axios";
 
 const UserPage = () => {
 
-  
+  React.useEffect(() => {
+   const token = localStorage.getItem("TOKEN")
+    axios.get("https://telegram-alisherjon-api.herokuapp.com/users", {
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    })
+     .then( (data) => {
+
+       console.log(data);
+     } )
+  }, [])
 
   return (
     <>
