@@ -7,7 +7,6 @@ export default function Login() {
   const navigate = useNavigate();
 
   function onSubmit(e) {
-
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
@@ -21,10 +20,10 @@ export default function Login() {
       .then((res) => res.json())
       .then((data) => {
         const token = data.token;
-        console.log(token)    
-        localStorage.setItem("TOKEN", JSON.stringify(token));
+        console.log(token);
+        localStorage.setItem("TOKEN", token);
+        console.log(data);
       });
-
   }
 
   return (

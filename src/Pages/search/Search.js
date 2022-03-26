@@ -1,62 +1,71 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const Search = () => {
+  const [mainData, setMaindata] = useState([])
   const [userData, setUserData] = useState("");
   const [phoneData, setPhoneData] = useState("");
   const [friendId, setFriendId] = useState("");
 
+
+  const navigate = useNavigate()
+
+
   const token = localStorage.getItem("TOKEN");
   const handleSubmit = (e) => {
-    console.log(token);
+    // console.log(token);
     e.preventDefault();
     const formData = new FormData(e.target);
     const body = Object.fromEntries(formData.entries());
     const username = body.username;
-    console.log(body, username);
+    // console.log(body, username);
     axios
-      .get(`https://telegram-alisherjon-api.herokuapp.com/users/${username}`, {
-        headers: {
-          authorization: `Bearer ${token}`,
+      .get(
+        `https://telegram-alisherjon-api.herokuapp.com/users/${username}`,
+        {
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
+          type: "CORS"
         },
-      })
+      )
       .then((response) => {
         const { data } = response;
         const { username, phone, _id } = data.user;
-        console.log(data.user);
+        // console.log(data.user);
+        setMaindata(data)
         setUserData(username);
         setPhoneData(phone);
         setFriendId(_id);
+        console.log(data);
       });
   };
-  console.log(phoneData);
+  // console.log(phoneData);
 
-  console.log(friendId);
   const handleClick = () => {
     axios
       .post(`https://telegram-alisherjon-api.herokuapp.com/chats`, {
         headers: {
           authorization: `Bearer ${token}`,
-          // "Content-Type": "application/json",
+          "Content-Type": "application/json",
         },
-        body:  JSON.stringify(friendId),
+        body: friendId,
       })
       .then((response) => {
         console.log(response.data);
       });
+
+      if(mainData.status === 200){
+        navigate('/ChatPage')
+      }else{
+        navigate('/search')
+      }
+
   };
 
   // const handleClick = () => {
-  //   fetch("https://telegram-alisherjon-api.herokuapp.com/chats", {
-  //     method: "POST",
-  //     body: JSON.stringify(friendId),
-  //     headers: {
-  //       authorization: `Bearer ${token}`,
-  //       // "Content-Type": "application/json",
-  //     },
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => console.log(data));
+    //  console.log(123);
   // };
 
   return (
