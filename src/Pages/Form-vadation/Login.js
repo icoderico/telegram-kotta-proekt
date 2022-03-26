@@ -19,9 +19,16 @@ export default function Login() {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         const token = data.token;
-        console.log(token)
+        console.log(token);
         localStorage.setItem("TOKEN", JSON.stringify(token));
+        if (data.status === 200) {
+          navigate("/allchat");
+        } else {
+          alert("Password or username is wrong! Please write another one!😁");
+          e.target.reset();
+        }
       });
   }
 

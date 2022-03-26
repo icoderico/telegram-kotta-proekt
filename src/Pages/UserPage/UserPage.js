@@ -19,8 +19,8 @@ const UserPage = () => {
         <div className="userPageHeader">
           <h4>Settings</h4>
           <div className="userPageIcons">
-            <i class="fa-solid fa-ellipsis-vertical"></i>
-            <i class="fa-solid fa-delete-left"></i>
+            <i className="fa-solid fa-ellipsis-vertical"></i>
+            <i className="fa-solid fa-delete-left"></i>
           </div>
         </div>
 
@@ -43,7 +43,7 @@ const UserPage = () => {
         <div className="userPageInformations">
           <div className="row">
             <div className="col-3 text-center">
-              <i class="fa-solid fa-circle-info"></i>
+              <i className="fa-solid fa-circle-info"></i>
             </div>
             <div className="col-9">
               <div className="userInfo">
@@ -68,28 +68,28 @@ const UserPage = () => {
           <div className="row userIL">
           <div className="col-2 text-center">
             <div className="icon">
-          <i class="fa-solid fa-user"></i></div>
+          <i className="fa-solid fa-user"></i></div>
             </div>
             <h6 className="col-10">Change profile</h6>
           </div>
           <div className="row userIL">
           <div className="col-2 text-center">
             <div className="icon">
-          <i class="fa-solid fa-bell"></i></div>
+          <i className="fa-solid fa-bell"></i></div>
             </div>
             <h6 className="col-10">Nodifications</h6>
           </div>
           <div className="row userIL">
           <div className="col-2 text-center">
             <div className="icon">
-          <i class="fa-solid fa-lock"></i></div>
+          <i className="fa-solid fa-lock"></i></div>
             </div>
             <h6 className="col-10">Security</h6>
           </div>
           <div className="row userIL">
           <div className="col-2 text-center">
             <div className="icon">
-          <i class="fa-solid fa-message"></i>
+          <i className="fa-solid fa-message"></i>
             </div>
             </div>
             <h6 className="col-10">Chat settings</h6>
@@ -97,7 +97,7 @@ const UserPage = () => {
           <div className="row userIL">
           <div className="col-2 text-center">
             <div className="icon">
-            <i class="fa-solid fa-folder-closed"></i>
+            <i className="fa-solid fa-folder-closed"></i>
             </div>
             </div>
             <h6 className="col-10">Folders</h6>
@@ -105,7 +105,7 @@ const UserPage = () => {
           <div className="row userIL">
           <div className="col-2 text-center">
             <div className="icon">
-            <i class="fa-solid fa-phone"></i>
+            <i className="fa-solid fa-phone"></i>
             </div>
             </div>
             <h6 className="col-10">Call settings</h6>
@@ -113,7 +113,7 @@ const UserPage = () => {
           <div className="row userIL">
           <div className="col-2 text-center">
             <div className="icon">
-            <i class="fa-solid fa-earth-americas"></i>
+            <i className="fa-solid fa-earth-americas"></i>
             </div>
             </div>
             <h6 className="col-10">Language</h6>
