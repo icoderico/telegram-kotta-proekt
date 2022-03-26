@@ -3,14 +3,12 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Search = () => {
-  const [mainData, setMaindata] = useState([])
+  const [mainData, setMaindata] = useState([]);
   const [userData, setUserData] = useState("");
   const [phoneData, setPhoneData] = useState("");
   const [friendId, setFriendId] = useState("");
 
-
-  const navigate = useNavigate()
-
+  const navigate = useNavigate();
 
   const token = localStorage.getItem("TOKEN");
   const handleSubmit = (e) => {
@@ -21,20 +19,17 @@ const Search = () => {
     const username = body.username;
     // console.log(body, username);
     axios
-      .get(
-        `https://telegram-alisherjon-api.herokuapp.com/users/${username}`,
-        {
-          headers: {
-            authorization: `Bearer ${token}`,
-          },
-          type: "CORS"
+      .get(`https://telegram-alisherjon-api.herokuapp.com/users/${username}`, {
+        headers: {
+          authorization: `Bearer ${token}`,
         },
-      )
+        type: "CORS",
+      })
       .then((response) => {
         const { data } = response;
         const { username, phone, _id } = data.user;
         // console.log(data.user);
-        setMaindata(data)
+        setMaindata(data);
         setUserData(username);
         setPhoneData(phone);
         setFriendId(_id);
@@ -45,27 +40,26 @@ const Search = () => {
 
   const handleClick = () => {
     axios
-      .post(`https://telegram-alisherjon-api.herokuapp.com/chats`, {
-        headers: {
-          authorization: `Bearer ${token}`,
-          "Content-Type": "application/json",
+      .post(
+        `https://telegram-alisherjon-api.herokuapp.com/chats`,
+        {
+          friendId,
         },
-        body: friendId,
-      })
+        {
+          headers: {
+            authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        }
+      )
       .then((response) => {
-        console.log(response.data);
+        const id = response.data.chat._id;
+        navigate(`/ChatPage/${id}`);
       });
-
-      if(mainData.status === 200){
-        navigate('/ChatPage')
-      }else{
-        navigate('/search')
-      }
-
   };
 
   // const handleClick = () => {
-    //  console.log(123);
+  //  console.log(123);
   // };
 
   return (
@@ -82,9 +76,12 @@ const Search = () => {
             Go
           </button>
         </form>
-        <ul>
-          <li onClick={handleClick}>
-            {userData} {phoneData}
+        <ul className="userUl">
+          <li className="userLi border border-solid rounded-pill px-4 ">
+            <p>
+              {userData} {phoneData}
+            </p>
+            <button onClick={handleClick}>Go Chat</button>
           </li>
         </ul>
       </div>
