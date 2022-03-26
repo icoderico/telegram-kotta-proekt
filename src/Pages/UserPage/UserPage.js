@@ -1,10 +1,11 @@
 import axios from "axios";
-import React from "react";
+import React, { useState } from "react";
 import "./userpage.scss";
 import UserImg from "./user-photo.jpg";
-import axios from "axios";
 
 const UserPage = () => {
+   const [userInfo, setUserInfo] = useState(null)
+
   React.useEffect(() => {
     const token = localStorage.getItem("TOKEN");
     axios
@@ -13,8 +14,14 @@ const UserPage = () => {
           authorization: `Bearer ${token}`,
         },
       })
-      .then((response) => console.log(response.data));
+      .then( (response) => {
+      const { user, name } = response.data;
+      setUserInfo(user)
+    })
   }, []);
+
+
+
   return (
     <>
       <div className="userPage">
@@ -34,7 +41,7 @@ const UserPage = () => {
               </div>
               <div className="col-9">
                 <div className="ms-4">
-                  <h5>Name Surname</h5>
+                { userInfo && <h5> {userInfo.name } </h5> } 
                   <p className="fw-lighter">Last seen recently</p>
                 </div>
               </div>
@@ -50,7 +57,7 @@ const UserPage = () => {
               </div>
               <div className="col-9">
                 <div className="userInfo">
-                  <h6>+998 (XX) XXX-XX-XX</h6>
+                 { userInfo && <h6> {userInfo.phone } </h6> } 
                   <p className="fw-lighter small">Phone Number</p>
                 </div>
                 <div className="userInfo">

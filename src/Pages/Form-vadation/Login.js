@@ -24,7 +24,7 @@ export default function Login() {
         console.log(token);
         localStorage.setItem("TOKEN", token);
         if (data.status === 200) {
-          navigate("/allchat");
+          navigate("/userme");
         } else {
           alert("Password or username is wrong! Please write another one!😁");
           e.target.reset();
