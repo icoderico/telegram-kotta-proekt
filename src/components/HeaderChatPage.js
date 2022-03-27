@@ -28,18 +28,20 @@ const HeaderChatPage = () => {
             setUserData(friend);
           });
       });
-  }, [chatId]);
+  }, [chatId, token]);
 
   return (
     <section id="headerChatPage">
       <div className="container">
         <div className="row py-2 justify-content-between w-100 align-items-center">
           <div className="col-10">
-            <h5 className="wordss">{userData.username}  {userData.phone}</h5>
+            <h5 className="wordss">
+              {userData.username} {userData.phone}
+            </h5>
             <small className="wordss">Last seen Recently</small>
           </div>
           <div className="col-2 align-self-center">
-            <ul className="d-flex justify-content-center  align-items-center">
+            <ul className="d-flex justify-content-between  align-items-center">
               <li>
                 <a
                   className="wordss"
