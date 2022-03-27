@@ -9,7 +9,7 @@ const MainChatPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    const text = Object.fromEntries(formData.entries());
+    const { text } = Object.fromEntries(formData.entries());
     console.log(text);
     console.log(chatId);
     axios
@@ -21,7 +21,7 @@ const MainChatPage = () => {
         },
         {
           headers: {
-            authorization: `bearer ${token}`,
+            authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
           },
         }
@@ -39,13 +39,7 @@ const MainChatPage = () => {
           className="top w-100"
           style={{ backgroundColor: "#" + randomColor }}
         >
-          <ul>
-            <li>
-              <p className="text-dark py-2 px-4 bg-light rounded-pill ">
-                diyor
-              </p>
-            </li>
-          </ul>
+         
         </div>
         <div className="bottom  w-100">
           <ul className="row sss justify-content-start  align-items-center ">
@@ -54,6 +48,7 @@ const MainChatPage = () => {
               <form onSubmit={handleSubmit} className="w-100">
                 <input
                   className="ps-2 w-100  form-control"
+                  name="text"
                   type="text"
                   placeholder="Write a message"
                 />
