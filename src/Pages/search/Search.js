@@ -32,7 +32,7 @@ const Search = () => {
         setUserData(username);
         setPhoneData(phone);
         setFriendId(_id);
-        console.log(data);
+        console.log(mainData, data);
       });
   };
   // console.log(phoneData);
