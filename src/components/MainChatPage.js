@@ -1,10 +1,11 @@
 import axios from "axios";
-import React from "react";
+import React, { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 
 const MainChatPage = () => {
   const token = localStorage.getItem("TOKEN");
   const { chatId } = useParams();
+  const [textt, setTextt] = useState({})
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,6 +32,35 @@ const MainChatPage = () => {
       });
   };
 
+    useEffect(() => {
+      axios
+        .get(`https://telegram-alisherjon-api.herokuapp.com/chats/${chatId}`, {
+          headers: {
+            authorization: `Bearer ${token}`,
+          },
+        })
+        .then((res) => {
+          axios
+            .get("https://telegram-alisherjon-api.herokuapp.com/users", {
+              headers: {
+                authorization: `Bearer ${token}`,
+              },
+            })
+            .then((response) => {
+              const mey = response.data.user;
+              console.log(res.data.chat.messages);
+              const {messages} = res.data.chat;
+              const text = messages;
+              setTextt(text);
+              console.log(mey);
+              const { members } = res.data.chat;
+              const friend = members.find((member) => member._id !== mey._id);
+              console.log(friend);
+            });
+          });
+        }, [chatId, token]);
+        console.log(textt);
+        
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
   return (
     <section id="mainChatPage">
@@ -39,7 +69,7 @@ const MainChatPage = () => {
           className="top w-100"
           style={{ backgroundColor: "#" + randomColor }}
         >
-         
+          
         </div>
         <div className="bottom  w-100">
           <ul className="row sss justify-content-start  align-items-center ">
