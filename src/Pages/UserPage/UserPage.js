@@ -1,4 +1,4 @@
- import axios from "axios";
+import axios from "axios";
 import React, { useState } from "react";
 import "./userpage.scss";
 import UserImg from "./user-photo.jpg";
@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom";
 
 const UserPage = () => {
   const navigate = useNavigate();
-  const [userInfo, setUserInfo] = useState(null)
-  const parsed = JSON.parse( localStorage.getItem("user-info"));
+  const [userInfo, setUserInfo] = useState(null);
+  const parsed = JSON.parse(localStorage.getItem("user-info"));
 
   React.useEffect(() => {
     const token = localStorage.getItem("TOKEN");
@@ -17,11 +17,11 @@ const UserPage = () => {
           authorization: `Bearer ${token}`,
         },
       })
-      .then( (response) => {
-      const { user, name } = response.data;
-      setUserInfo(user)
-      const nimadir = localStorage.setItem( "user-info", JSON.stringify(user) )
-    })
+      .then((response) => {
+        const { user, name } = response.data;
+        setUserInfo(user);
+        const nimadir = localStorage.setItem("user-info", JSON.stringify(user));
+      });
   }, []);
 
   function LogOut() {
@@ -30,16 +30,21 @@ const UserPage = () => {
     navigate("/login");
   }
 
+  function Start() {
+    navigate("/search");
+  }
+
   return (
     <>
       <div className="userPage">
         <div className="userCard">
           <div className="userPageHeader">
             <h4> Settings </h4>
+            <div className="startbu" onClick={Start}>Start Messaging</div>
             <div className="userPageIcons">
               <i
                 onClick={LogOut}
-                class="fa-solid fa-arrow-right-from-bracket"
+                className="fa-solid fa-arrow-right-from-bracket"
               ></i>
               <i className="fa-solid fa-ellipsis-vertical"></i>
             </div>
@@ -52,7 +57,7 @@ const UserPage = () => {
               </div>
               <div className="col-9">
                 <div className="ms-4">
-                  {userInfo &&  <h5> {userInfo.name} </h5> } 
+                  {userInfo && <h5> {userInfo.name} </h5>}
                   <p className="fw-lighter">Last seen recently</p>
                 </div>
               </div>
@@ -68,7 +73,7 @@ const UserPage = () => {
               </div>
               <div className="col-9">
                 <div className="userInfo">
-                {userInfo &&  <h6> {userInfo.phone} </h6> } 
+                  {userInfo && <h6> {userInfo.phone} </h6>}
                   <p className="fw-lighter small">Phone Number</p>
                 </div>
                 <div className="userInfo">
@@ -117,30 +122,6 @@ const UserPage = () => {
                 </div>
               </div>
               <h6 className="col-10">Chat settings</h6>
-            </div>
-            <div className="row userIL">
-              <div className="col-2 text-center">
-                <div className="icon">
-                  <i className="fa-solid fa-folder-closed"></i>
-                </div>
-              </div>
-              <h6 className="col-10">Folders</h6>
-            </div>
-            <div className="row userIL">
-              <div className="col-2 text-center">
-                <div className="icon">
-                  <i className="fa-solid fa-phone"></i>
-                </div>
-              </div>
-              <h6 className="col-10">Call settings</h6>
-            </div>
-            <div className="row userIL">
-              <div className="col-2 text-center">
-                <div className="icon">
-                  <i className="fa-solid fa-earth-americas"></i>
-                </div>
-              </div>
-              <h6 className="col-10">Language</h6>
             </div>
           </div>
         </div>
