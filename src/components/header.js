@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Offcanvas, Button } from "react-bootstrap";
 import { useState } from "react";
 
@@ -42,7 +43,9 @@ const HeaderAllChat = () => {
             <h1 className="color">Chats</h1>
           </div>
           <div className="col-4">
-            <i className="fas fa-search color buton"></i>
+            <Link to={"/search"}>
+              <i className="fas fa-search color buton"></i>
+            </Link>
           </div>
         </div>
       </div>

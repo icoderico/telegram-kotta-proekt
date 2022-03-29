@@ -5,7 +5,8 @@ import { useParams } from "react-router-dom";
 const MainChatPage = () => {
   const token = localStorage.getItem("TOKEN");
   const { chatId } = useParams();
-  const [textt, setTextt] = useState({});
+  const [messages, setMessages] = useState([]);
+  const [userId, setUserId] = useState("")
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -48,23 +49,22 @@ const MainChatPage = () => {
           })
           .then((response) => {
             const mey = response.data.user;
-            // console.log(res.data.chat.messages);
-            const { members } = res.data.chat;
-            const friend = members.find((member) => member._id !== mey._id);
-            console.log(friend);
+            setUserId(mey._id)
             const { messages } = res.data.chat;
-            console.log(messages);
-            const myText = messages.find((message) => message.from === mey._id);
-            setTextt(myText.text);
-            const hisText = messages.find(
-              (message) => message.from === friend._id
-            );
-            console.log(hisText.text);
-            console.log(mey._id);
+            console.log(res.data.chat);
+            setMessages(messages);
+            // const text = messages;
+            // // setTextt(text);
+            // const { members } = res.data.chat;
+            // const friend = members.find((member) => member._id !== mey._id);
+            // const message = text.map(
+            //   (userId) => mey._id === userId.from && userId.text
+            // );
+            // console.log(message);
+            // console.log(friend);
           });
       });
   }, [chatId, token]);
-  console.log(textt);
 
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
   return (
@@ -75,12 +75,18 @@ const MainChatPage = () => {
           style={{ backgroundColor: "#" + randomColor }}
         >
           <ul>
-            <div>
-              <li className="right float-end">Diyor</li>
-            </div>
-            <div>
-              <li className="left float-start">Diyor</li>
-            </div>
+            {messages.map((message) => {
+              return (
+                <div
+                  key={message._id}
+                  className={`d-flex w-100 justify-content-${
+                    message.from === userId ? "end" : "start"
+                  } mt-3`}
+                >
+                  <li className="right">{message.text}</li>
+                </div>
+              );
+            })}
           </ul>
         </div>
         <div className="bottom  w-100">
