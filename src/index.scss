@@ -108,6 +108,40 @@ section#headerChatPage {
 section#mainChatPage {
   .top {
     height: calc(100vh - 170px);
+    overflow: auto;
+    padding-right: 35px;
+    ul {
+      div {
+        width: 100%;
+      }
+      // width: 100%;
+      .right {
+        color: #000;
+        font-size: 18px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: 1px solid #000;
+        background-color: #eeeeee;
+        // float: right;
+        width:25%;
+        border-radius: 25px 25px 0 25px;
+      }
+      .left {
+        color: #eeeeee;
+        font-size: 18px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: 1px solid #eeeeee;
+        background-color: #000;
+        // float: left;
+        width: 25%;
+        border-radius: 30px 30px 30px 0;
+      }
+    }
   }
   .container {
     background-color: #b263ff;
