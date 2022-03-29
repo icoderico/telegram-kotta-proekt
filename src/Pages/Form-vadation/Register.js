@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import loginImg from "./img.svg";
+import axios from "axios";
 
 function Register() {
   const navigate = useNavigate();
@@ -29,11 +30,10 @@ function Register() {
         const token2 = localStorage.getItem("TOKEN")
         console.log(token2);
         if(token) {
-          navigate("/allchat")
+          navigate("/userme")
         }
       });
   }
-
 
   return (
     <div>
