@@ -1,10 +1,13 @@
-import axios from "axios";
+ import axios from "axios";
 import React, { useState } from "react";
 import "./userpage.scss";
 import UserImg from "./user-photo.jpg";
+import { useNavigate } from "react-router-dom";
 
 const UserPage = () => {
-   const [userInfo, setUserInfo] = useState(null)
+  const navigate = useNavigate();
+  const [userInfo, setUserInfo] = useState(null)
+  const parsed = JSON.parse( localStorage.getItem("user-info"));
 
   React.useEffect(() => {
     const token = localStorage.getItem("TOKEN");
@@ -17,20 +20,28 @@ const UserPage = () => {
       .then( (response) => {
       const { user, name } = response.data;
       setUserInfo(user)
+      const nimadir = localStorage.setItem( "user-info", JSON.stringify(user) )
     })
   }, []);
 
-
+  function LogOut() {
+    localStorage.removeItem("user-info");
+    localStorage.removeItem("TOKEN");
+    navigate("/login");
+  }
 
   return (
     <>
       <div className="userPage">
         <div className="userCard">
           <div className="userPageHeader">
-            <h4>Settings</h4>
+            <h4> Settings </h4>
             <div className="userPageIcons">
+              <i
+                onClick={LogOut}
+                class="fa-solid fa-arrow-right-from-bracket"
+              ></i>
               <i className="fa-solid fa-ellipsis-vertical"></i>
-              <i className="fa-solid fa-delete-left"></i>
             </div>
           </div>
 
@@ -41,7 +52,7 @@ const UserPage = () => {
               </div>
               <div className="col-9">
                 <div className="ms-4">
-                { userInfo && <h5> {userInfo.name } </h5> } 
+                  {userInfo &&  <h5> {userInfo.name} </h5> } 
                   <p className="fw-lighter">Last seen recently</p>
                 </div>
               </div>
@@ -57,7 +68,7 @@ const UserPage = () => {
               </div>
               <div className="col-9">
                 <div className="userInfo">
-                 { userInfo && <h6> {userInfo.phone } </h6> } 
+                {userInfo &&  <h6> {userInfo.phone} </h6> } 
                   <p className="fw-lighter small">Phone Number</p>
                 </div>
                 <div className="userInfo">
