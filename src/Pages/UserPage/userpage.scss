@@ -4,7 +4,7 @@
     justify-content: center;
     min-height: 100vh;
     background: url("./bg.jpg") no-repeat center / cover;
-
+    overflow: auto;
     .userCard{
         width: 400px;
         background: #eee;
@@ -47,7 +47,6 @@
 
         .userPageProfile{
             padding: 18px 15px;
-
             .img{
                 border-radius: 50%;
                 text-align: center;

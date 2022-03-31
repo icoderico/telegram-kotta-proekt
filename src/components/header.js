@@ -27,7 +27,9 @@ const HeaderAllChat = () => {
                 <ul className="text-center py-2 text-light offcanvasUl  bg-opacity-50">
                   <li className="mt-4">Blocked User</li>
                   <li className="mt-4">Active Session</li>
-                  <li className="mt-4">Edit Profile</li>
+                  <li className="mt-4">
+                    <Link className="text-decoration-none text-white" to={"/userme"}>Edit Profile</Link>
+                  </li>
                   <li className="mt-4">Notifications</li>
                   <li className="mt-4">Privacy And Security</li>
                   <li className="mt-4">Chat Settings</li>

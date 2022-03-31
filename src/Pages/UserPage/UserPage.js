@@ -31,7 +31,7 @@ const UserPage = () => {
   }
 
   function Start() {
-    navigate("/search");
+    navigate("/allchat");
   }
 
   return (
@@ -57,7 +57,7 @@ const UserPage = () => {
               </div>
               <div className="col-9">
                 <div className="ms-4">
-                  {userInfo && <h5> {userInfo.name} </h5>}
+                  {userInfo && <h5> {userInfo.name.substring(0, 12)}... </h5>}
                   <p className="fw-lighter">Last seen recently</p>
                 </div>
               </div>
