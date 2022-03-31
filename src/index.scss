@@ -70,10 +70,17 @@ ul {
 section#chatList {
   ul {
     list-style: none;
+    padding-right: 16px;
     li {
       padding-top: 10px;
       padding-bottom: 10px;
       border-bottom: 2px solid #eeeeee;
+      text-transform: capitalize;
+      
+      &:hover {
+        border-color: #b263ff;
+        transition: .3s;
+      }
     }
     .image {
       border: 5px solid #b263ff;

@@ -1,19 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-// import { Link } from "react-router-dom";
-
-// const data = new Date();
-// const today = data.getDate();
-// const month = data.getMonth();
-// const year = data.getFullYear();
-// const day = data.getDay();
+import { Link } from "react-router-dom";
 
 const ChatList = () => {
   const token = localStorage.getItem("TOKEN");
   const [chats, setChats] = useState([]);
   const [myId, setMyId] = useState("");
-  // const [allChat, setAllChat] = useState([]);
-  // const [myFriend, setMyFriend] = useState({});
 
   useEffect(() => {
     axios
@@ -24,25 +16,28 @@ const ChatList = () => {
         },
       })
       .then((res) => {
-        console.log(res.data);
         const allChats = res.data.user.chats;
-        console.log(allChats);
-        setChats(res.data.user.chats);
+        setChats(allChats);
         setMyId(res.data.user._id);
-        console.log(res.data.user.chats);
       });
   }, [token]);
 
-  chats.map((chat) => {
-    console.log(chat.members);
-  })
-// console.log(members);
-
-
-
   return (
     <section id="chatList">
-      <ul></ul>
+      <ul>
+        {chats.map((chat, index) => {
+          const { members } = chat;
+          const friend = members.find((member) => member._id !== myId);
+          return (
+            <li key={index}>
+              <Link className="text-decoration-none text-dark fs-5" to={`/chatPage/${chat._id}`}>
+                <p>{friend.name}</p>
+                <small>{friend.phone}</small>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
     </section>
   );
 };
