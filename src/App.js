@@ -22,8 +22,17 @@ function App() {
   return (
     <>
       <Routes>
-        {/* <Route path="" element={<HomePage />} /> */}
         <Route path="login" element={<Account />} />
+
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <HomePage />
+            </ProtectedRoute>
+          }
+        />
+
         <Route
           path="search"
           element={
@@ -33,8 +42,23 @@ function App() {
           }
         />
         {/* <Route path="single" element={<SingleChat />} /> */}
-        <Route path="allchat" element={<FirstPage />} />
-        <Route path="userme" element={<UserPage />} />
+        <Route
+          path="allchat"
+          element={
+            <ProtectedRoute>
+              <FirstPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="userme"
+          element={
+            <ProtectedRoute>
+              <UserPage />
+            </ProtectedRoute>
+          }
+        />
         <Route path="chatPage/:chatId" element={<Chatpage />}></Route>
       </Routes>
     </>
